@@ -10,25 +10,33 @@
 
   <nav>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
       <li><a href="resume.pdf" target="_blank">Resume</a></li>
     </ul>
   </nav>
 
   <header>
     <h1>Sreelakshmi</h1>
-    <p>Entry-Level Software Developer | Python & Java Enthusiast</p>
+    <h1>Software Developer | Python & Java Enthusiast</h1>
   </header>
 
   <section id="about">
+
     <h2>👩‍💻 About Me</h2>
-    <p>I'm an aspiring software engineer passionate about creating clean, efficient code. I enjoy working with Python and Java, and I’m always eager to learn new technologies and frameworks.</p>
+    <p>Hi, I'm Sreelakshmi — a Computer Science graduate with an MSc from Coventry University, UK. I bring over 1 year of experience in the automotive industry, where I worked closely with teams and stakeholders, participated in technical discussions, and became familiar with industry standards like ASPICE.
+
+During this time, I regularly collaborated using tools like Confluence and JIRA, gaining experience in project documentation and agile workflows.
+
+Now, I'm looking to rebuild my career and step into the world of software development with fresh energy. I’m a loyal, hardworking, and passionate individual who is eager to learn, grow, and contribute to a dynamic development team. My goal is to begin an entry-level software developer role where I can apply my background and continue developing strong technical skills.
+
+Let’s build something great together!
   </section>
 
   <section id="skills">
+
     <h2>🛠️ Skills</h2>
     <ul class="skills">
       <li>Python</li>
@@ -41,6 +49,7 @@
   </section>
 
   <section id="projects">
+
     <h2>📂 Projects</h2>
 
     <div class="project">
@@ -51,13 +60,15 @@
     </div>
 
     <div class="project">
+
       <img src="images/login.png" alt="Login System" />
       <h3>🔐 User Login System</h3>
       <p>Flask app for login/logout using hashed passwords and sessions.</p>
       <a href="https://github.com/sreelakshmi-collab/user-login" target="_blank">GitHub</a>
     </div>
 
-    <div class="project">
+    <div class="projects">
+
       <img src="images/library.png" alt="Library System" />
       <h3>📚 Library Management</h3>
       <p>Console-based book loan system in Python with OOP.</p>
@@ -66,15 +77,49 @@
   </section>
 
   <section id="contact">
+
     <h2>📫 Contact Me</h2>
+<<<<<<< HEAD
     <p>Email: <a href="mailto:sreelakshmipgovindan199@gmail.com">sreelakshmipgovindan199@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/sreelakshmi-collab" target="_blank">https://github.com/sreelakshmi-collab</a></p>
     <p>LinkedIn: <a href="linkedin.com/in/sreelakshmi-p-govindan-b00aa1152/" target="_blank">linkedin</a></p>
+=======
+    <p>Email: <a href="mailto:sreelakshmipgovindan1997@gmail.com">sreelakshmipgovindan1997@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/sreelakshmi-collab" target="_blank">sreelakshmi-collab</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sreelakshmi-p-govindan-b00aa1152/" target="_blank">linkedin</a></p>
+>>>>>>> fc295f6 (Changes in nav and highlight the sections)
   </section>
 
   <footer>
     <p>© 2025 Sreelakshmi</p>
   </footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+
 
 </body>
 </html>
